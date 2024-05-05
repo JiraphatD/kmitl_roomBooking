@@ -1,0 +1,23 @@
+h1 {
+    font-weight: bold;
+}
+
+.approve {
+    margin: 2vw;
+    padding: 10px;
+}
+
+.detail {
+    margin: 1vw;
+    padding: 5px;
+}
+
+.detail-box {
+    padding: 15px;
+    background-color: lightblue;
+    box-shadow: 5px 5px gainsboro;
+}
+
+.approve-button {
+    padding: 20px;
+}

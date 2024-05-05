@@ -1,0 +1,85 @@
+.contain{
+    margin: 1vw;
+}
+.usageText{
+    font-size: 2vw;
+    font-weight: bold;
+}
+.floorText{
+    font-size: 3vw;
+    font-weight: bolder;
+}
+.displaySpace{
+    background-color: lightblue;
+    /* border: 2px solid black; */
+    box-shadow: 5px 5px gainsboro;
+    /* margin-left: 1vw; */
+    /* margin-right: 1vw; */
+    border-radius: 5px;
+    text-align: center;
+    padding: 1vw;
+    /* height: 12.5vw; */
+}
+.chart{
+    padding-left: 1vw;
+    /* margin-left: 15vw; */
+    /* background-color: aquamarine; */
+}
+.export{
+    /* position: absolute;
+    right: 10vw; */
+    font-family: 'Prompt';
+    height: 100%;
+    width: 100%;
+}
+.upBtn{
+    cursor: pointer;
+}
+.downBtn{
+    cursor: pointer;
+}
+.text{
+    font-size: 0.8vw;
+}
+.roomName{
+    font-size: 1.5vw;
+    font-weight: 600;
+}
+.selectChart{
+    margin-top: 1vw;
+}
+@media only screen and (min-width: 600px) and (max-width: 1200px) {
+    .floorText{
+        font-size: 5vw;
+    }
+    .export{
+        height: 100%;
+    }
+    .text{
+        font-size: 2vw;
+    }
+    .roomName{
+        font-size: 3vw;
+    }
+}
+@media only screen and (max-width: 600px) {
+    .floorText{
+        font-size: 10vw;
+    }
+    .usageText{
+        font-size: 5vw;
+    }
+    .export{
+        margin-top: 2vw;
+        width: 100%;
+    }
+    .displaySpace{
+        /* height: 20vw; */
+    }
+    .text{
+        font-size: 3vw;
+    }
+    .roomName{
+        font-size: 4vw;
+    }
+}

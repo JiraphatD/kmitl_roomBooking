@@ -1,0 +1,162 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum RoomStatus {
+  Active
+  Available
+  Unavailable
+}
+
+enum RoomCategory {
+  Small_Lecture_Room
+  Medium_Lecture_Room
+  Large_Lecture_Room
+  Education_Service_Room
+  Entertainment_Room
+  Large_Conference_Room
+  Small_Laboratory_Room
+  Large_Laboratory_Room
+  Support_Room
+  Multi_Purpose_Hall
+  None
+}
+
+model Booker {
+  id         Int       @id @default(autoincrement())
+  name       String    @db.VarChar(255)
+  email      String    @unique @db.VarChar(255)
+  verified   Boolean   @default(false)
+  secret_key String
+  booking    Booking[]
+  role       Role?
+}
+
+enum Role {
+  Student
+  Teacher
+  Admin
+  Guest
+}
+
+model SuperUser {
+  id       Int    @id @default(autoincrement())
+  username String @unique
+  password String
+}
+
+model Booking {
+  id                 Int          @id @default(autoincrement())
+  booker             Booker       @relation(fields: [booker_id], references: [id], onDelete: Cascade)
+  booker_id          Int
+  advertise          Advertise?   @relation(fields: [advertiseId], references: [id])
+  advertiseId        Int?
+  room               Room         @relation(fields: [room_id], references: [id])
+  room_id            String
+  title              String
+  purpose            String
+  booked_datetime    DateTime     @db.Timestamptz()
+  check_in_datetime  DateTime     @db.Timestamptz()
+  check_out_datetime DateTime     @db.Timestamptz()
+  notified_user      Boolean      @default(false)
+  approvement        Approvement?
+}
+
+model DeclineDeleteBooking {
+  id                Int      @id
+  booker_name       String
+  room              String
+  title             String
+  purpose           String
+  reason            String
+  approved          Boolean
+  check_in_datetime DateTime @db.Timestamptz()
+  datetime          DateTime @db.Timestamptz()
+}
+
+model Approvement {
+  booking          Booking  @relation(fields: [booking_id], references: [id], onDelete: Cascade)
+  booking_id       Int      @id
+  is_approved      Boolean  @default(false)
+  approve_datetime DateTime @db.Timestamptz()
+}
+
+model Room {
+  id            String          @id @db.VarChar(255)
+  room_name     String
+  room_image    String
+  floor         Int
+  description   String
+  seat          Int
+  advertise     AdvertiseRoom[] // Use the join table for the relationship
+  room_status   RoomStatus
+  room_category RoomCategory
+  booking       Booking[]
+  laboratory    Laboratory?
+  accessories   Accessories[]
+}
+
+model Laboratory {
+  room              Room       @relation(fields: [room_id], references: [id])
+  room_id           String     @id
+  computer_quantity Int
+  computer_brand    String
+  display           String
+  cpu               String
+  ram               String
+  main_memory       String
+  gpu               String
+  operation_system  String
+  protection_system String
+  software          Software[]
+}
+
+model Software {
+  id            Int          @id @default(autoincrement())
+  software_name String
+  laboratory    Laboratory[]
+}
+
+model Accessories {
+  id             Int      @id @unique @default(autoincrement())
+  accessory_name String
+  quantity       Int
+  setup_date     DateTime @db.Timestamptz()
+  Room           Room     @relation(fields: [room_id], references: [id])
+  room_id        String   @db.VarChar(255)
+}
+
+model Advertise {
+  id           Int                 @id @default(autoincrement())
+  title        String
+  description  String
+  image_url    String
+  active_date  DateTime            @db.Timestamptz()
+  end_date     DateTime            @db.Timestamptz()
+  rooms        AdvertiseRoom[] // Use the join table for the relationship
+  bookings     Booking[]
+  notification NotificationStatus?
+}
+
+enum NotificationStatus {
+  Sent
+  NotSent
+}
+
+// Join table
+model AdvertiseRoom {
+  id          Int       @id @unique @default(autoincrement())
+  advertise   Advertise @relation(fields: [advertiseId], references: [id])
+  advertiseId Int
+  room        Room      @relation(fields: [roomId], references: [id])
+  roomId      String
+  // Add any additional fields you might need for this relationship
+}

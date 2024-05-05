@@ -1,0 +1,69 @@
+.imgContainer{
+    /* background-color: #1d86f1; */
+}
+.adsImage{
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    height: 100%;
+}
+.adsSpace{
+    /* background-color: burlywood; */
+    margin-left: 2vw;
+    margin-right: 2vw;
+}
+.name{
+    font-weight: 900;
+}
+.detail{
+    
+}
+.adsFind button{
+    background-color: whitesmoke;
+    border: none;
+    color: grey;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color ease-in-out .3s;
+}
+.adsFind button:hover{
+    background-color: #1d86f1;
+    color: white;
+}
+
+.touch{
+    .adsImage{
+        width: 40vw;
+    }
+    .imgContainer{
+    }
+    .adsSpace{
+        /* background-color: salmon; */
+        width: 100%;
+        margin-left: 0vw;
+        margin-right: 0vw;
+    }
+    .name{
+        font-size: 5vw;
+        margin-top: 2vw;
+        margin-bottom: 2vw;
+    }
+    .detail{
+        font-size: 2vw;
+        margin-bottom: 2vw;
+    }
+    .date{
+        font-size: 3vw;
+    }
+    .time{
+        font-size: 3vw;
+    }
+    .adsFind button{
+        /* width: 20vw; */
+    }
+}

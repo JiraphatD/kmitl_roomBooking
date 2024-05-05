@@ -1,0 +1,39 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Prompt', sans-serif;
+}
+
+/* Calendar Styles */
+
+.rbc-toolbar .rbc-btn-group button {
+  border: none;
+  background: none;
+  margin-left: 2px;
+  margin-right: 2px
+}
+
+.rbc-btn-group > button:first-child:not(:last-child) {
+  border-top-right-radius: 2px;
+  border-bottom-right-radius: 2px;
+}
+
+.rbc-btn-group > button:last-child:not(:first-child) {
+  border-top-right-radius: 2px;
+  border-bottom-right-radius: 2px;
+}
+
+.rbc-toolbar .rbc-btn-group button:active:hover,
+.rbc-toolbar .rbc-btn-group button:active:focus,
+.rbc-toolbar .rbc-btn-group button.rbc-active:hover,
+.rbc-toolbar .rbc-btn-group button.rbc-active:focus,
+.rbc-toolbar .rbc-btn-group .rbc-active {
+  /* border: 1px solid #112351; */
+  background-color: #4974E7;
+  color: #FFFFFF;
+}
+
+.rbc-agenda-date-cell, .rbc-agenda-time-cell, .rbc-agenda-event-cell {
+  background-color: #FFFFFF;
+}

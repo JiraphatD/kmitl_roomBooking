@@ -1,0 +1,172 @@
+h4{
+    overflow: hidden;
+    white-space: nowrap;
+    /* font-size: 30vw; */
+}
+
+.selectedRoom{
+    border: 4px solid black ;
+}
+.floorNumber h1{
+    font-size: 4rem;
+    font-weight: bold;
+}
+.floorNumber h4{
+    font-size: 2rem;
+}
+.map{
+    /* background-color: aquamarine; */
+    height: 80vh;
+    text-align: center;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.svg_map{
+    height: 100%;
+    /* position: absolute; */
+    /* top: -6%;    */
+}
+.svg_map2{
+    height: 100%;
+    /* margin-right: 5%; */
+    /* position: absolute; */
+    /* top: %; */
+}
+.svg_map3{
+    height: 100%;
+    /* position: absolute; */
+    /* margin-right: 10%; */
+    /* right:8%; */
+}
+.room{
+    height: 100%;
+    width: 100%;
+    cursor: pointer;
+    position: absolute;
+    text-align: center;
+    transition: border-width 0.2s ease-in-out, border-color 0.2s ease-in-out;
+    /* border: 0px solid transparent; */
+}
+.room:hover{
+    /* box-shadow: 10px 10px lightsalmon; */
+    border: 6px solid lightsalmon;
+}
+.room p{
+    font-size: small;
+}
+.sroom{
+    height: 100%;
+    width: 100%;
+    cursor: pointer;
+    position: absolute;
+    text-align: center;
+    transition: border-width 0.2s ease-in-out, border-color 0.2s ease-in-out;
+    /* border: 0px solid transparent;  */
+}
+.sroom h4{
+    font-size: medium;
+}
+.sroom p{
+    font-size: small;
+    margin-top:-0.8rem;
+    transition: 0.2s ease-in-out;
+}
+.sroom:hover{
+    /* box-shadow: 10px 10px lightsalmon; */
+    border: 5px solid lightsalmon;
+    
+}
+.sroom:hover p{
+    transition: 0.2s;
+    margin-top:-0.9rem;
+}
+.lroom{ /* room can't book */
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    text-align: center;
+    transition: border-width 0.2s ease-in-out, border-color 0.2s ease-in-out;
+}
+.lroom p{
+    font-size: 75%;
+    margin-top:-0.8rem;
+}
+.categorized{
+    /* box-shadow: 0 0 0 5px lightblue inset; */
+    background-color: lightblue;
+}
+
+.cube{
+    width: 100%;
+    height: 100%;
+
+}
+.color-transition {
+    transition: fill 0.5s ease;
+}
+.bgcolor-transition {
+    transition: background-color 0.5s ease;
+}
+.t_mphall svg{
+    transform: translate(14.3rem, 3rem);
+}
+.t_mphall h5{
+    transform: translate(14.5rem, 3.5rem);
+}
+.t_mphall p{
+    width: 200px;
+    transform: translate(30.5rem, 3.5rem);
+}
+@media screen and (max-width:900px){
+    .map{
+        /* background-color: aquamarine; */
+        height: 75vh;
+    }
+}
+@media screen and (max-width: 1600px) {
+    .svg_map{
+        height: 100%;
+        top:3%;
+    }
+    .svg_map2{
+        /* height:  90%;  */
+        top:2%;
+    }
+    .svg_map3{
+        height: 95%;
+        /* margin-right: 25%; */
+        }
+}
+@media screen and (max-width: 800px) {
+    /* .svg_map{
+        height: 90%;
+        top:2%;
+    } */
+    .floorNumber h1{
+        font-size: 3rem;
+        font-weight: bold;
+    }
+    .floorNumber h4{
+        font-size: 2rem;
+    }
+}
+@media screen and (max-width: 599px) {
+    .svg_map{
+        height:  85%;
+        top:2%;
+    }
+    .svg_map3{
+        height: 90%;
+        /* margin-right:35%; */
+    }
+    .floorNumber h1{
+        font-size: 3rem;
+        font-weight: bold;
+    }
+    .floorNumber h4{
+        font-size: 1.2rem;
+        word-wrap: break-word;
+    }
+}

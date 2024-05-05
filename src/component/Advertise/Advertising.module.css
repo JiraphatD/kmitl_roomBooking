@@ -1,0 +1,173 @@
+.topicAdvertise{
+    font-size: 3vw;
+    font-weight: bolder;
+    display: flex;
+}
+.cardUser,
+.cardAdmin{
+    border-radius: 4px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    text-decoration: none;
+    color: black;
+}
+.cardText {
+    display: flex;
+    flex-direction: column;
+    visibility: hidden;
+    opacity: 0;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: visibility 0s, opacity 0.5s linear;
+    z-index: 2;
+    font-size: 1.7vw;
+    font-weight: 900;
+    color: aliceblue;
+}
+.imgContainer{
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.cardUser::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    backdrop-filter: blur(0px);
+    transition: backdrop-filter 0.3s ease-in-out;
+    z-index: 1;
+}
+
+.cardUser:hover::before {
+    backdrop-filter: blur(2px) brightness(50%);
+}
+.cardUser:hover .cardText {
+    visibility: visible;
+    opacity: 1;
+}
+.cardDetail{
+    font-size: 0.9vw;
+    padding-left: 20px;
+    padding-right: 20px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.cardDetailName{
+    margin-top: 10px;
+    font-size: 1.5vw;
+    font-weight: bold;
+    /* background-color: salmon; */
+    width: 100%;
+    /* height: 4vw; */
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    overflow: hidden;
+}
+.cardDetailDescription{
+    /* background-color: salmon; */
+    width: 100%;
+    height: 5.5vw;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4;
+    overflow: hidden;
+    /* font-size: 1rem; */
+}
+.cardDetailRoom{
+    /* background-color: salmon; */
+    width: 100%;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    overflow: hidden;
+}
+.cardDetailDate{
+    /* background-color: salmon; */
+}
+@media only screen and (max-width: 900px) {
+    .cardDetailName{
+        /* height: 4vw; */
+        font-size: 3vw;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 1;
+        overflow: hidden;
+    }
+
+    .cardDetailDescription{
+        /* height: 9vw; */
+        font-size: 2vw;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 3;
+        overflow: hidden;
+    }
+    .cardDetailRoom{
+        /* height: 3vw; */
+        font-size: 2vw;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 1;
+        overflow: hidden;
+    }
+    .cardDetailDate{
+        font-size: 2vw;
+    }
+}
+@media only screen and (max-width: 600px) {
+    .topicAdvertise{
+        font-size: 6vw;
+    }
+    .cardDetailName{
+        font-size: 5vw;
+    }
+    .cardText{
+        font-size: 5vw;
+    }
+    .cardDetailDescription{
+        height: 4.5vw;
+        font-size: 3vw;
+        -webkit-line-clamp: 1;
+    }
+    .cardDetailRoom{
+        /* height: 4vw; */
+        font-size: 3vw;
+    }
+    .cardDetailDate{
+        font-size: 3vw;
+    }
+}
+.touch{
+    margin: 2vw;
+    .topicAdvertise{
+        font-size: 5vw;
+        display: flex;
+    }
+    .cardDetailName{
+        font-size: 3vw;
+    }
+    .cardDetailDescription{
+        font-size: 2vw;
+    }
+    .cardDetailRoom{
+        font-size: 2vw;
+    }
+    .cardDetailDate{
+        font-size: 2vw;
+    }
+}

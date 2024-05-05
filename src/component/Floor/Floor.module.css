@@ -1,0 +1,40 @@
+.FloorName{
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+}
+.FloorName h1{
+    font-size: 4rem;
+    font-weight: bold;
+}
+.FloorName h4{
+    font-size: 2rem;
+}
+.FloorBtn{
+    flex-direction: column;
+}
+@media screen and (max-width: 800px) {
+    .FloorName h1{
+        font-size: 3rem;
+        font-weight: bold;
+    }
+    .FloorName h4{
+        font-size: 2rem;
+    }
+}
+@media screen and (max-width: 599px) {
+    .FloorName h1{
+        font-size: 3rem;
+        font-weight: bold;
+    }
+    .FloorName h4{
+        font-size: 1.2rem;
+        word-wrap: break-word;
+    }
+}
+@media screen and (max-width: 440px) {
+    .FloorName h1{
+        font-size: 2.5rem;
+        font-weight: bold;
+    }
+}

@@ -1,0 +1,25 @@
+.modal{
+    width: 50% !important;
+    max-width: none !important;
+    z-index: 200;
+}
+.touchModal{
+    width: 90% !important;
+    max-width: none !important;
+}
+@media only screen and (max-width: 1200px) {
+    .modal{
+        
+        width: 90% !important;
+    }
+}
+@media only screen and (max-width: 900px) {
+    .modal{
+        width: 90% !important;
+    }
+}
+@media only screen and (max-width: 600px) {
+    .modal{
+        width: 96% !important;
+    }
+}

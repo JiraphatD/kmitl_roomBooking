@@ -1,0 +1,94 @@
+.rotate {
+    animation: rotate 5s linear infinite;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+.left{
+    background-color: #112351;
+    color: whitesmoke;
+    height: 100vh;
+    position: fixed;
+    width: 17vw;
+    & img {
+        width: 95%;
+        margin-left: 5px;
+        margin-top: 7px;
+    }
+}
+.right{
+    margin-left: 3vw;
+    margin-right: 3vw;
+    height: 100vh;
+}
+.itemNav{
+    font-size: 1vw;
+    color: whitesmoke;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+    padding-left: 1vw;
+    transition: all 0.3s ease;
+}
+.itemNav:hover{
+    background-color: #2a53bd;
+    border-radius: 4px;
+    margin-left: 1vw;
+    margin-right: 1vw;
+}
+.activeLink{
+    background-image: linear-gradient(to right, #112351 , #2a53bd);
+    margin-left: 1vw;
+    transition: all 0.3s ease;
+}
+.activeHome{
+    background-image: linear-gradient(to right, #112351 , #2a53bd);
+}
+.NavContainer{
+    height: 7vh;
+    width: 100%;
+    background-color: #112351;
+    position: fixed;
+    align-items: center;
+    z-index: 100;
+}
+@media only screen and (max-width: 600px) { /*phone*/
+    .left{
+        width: 50vw;
+        .itemNav{
+            font-size: 3vw;
+        }
+        img{
+            margin-left: 1vw;
+        }
+    }
+    .NavContainer{
+        height: 6vh;
+    }
+}
+@media only screen and (min-width: 600px) and (max-width: 900px) { /*tablet vertical*/
+    .left{
+        width: 50vw;
+    }
+    .itemNav{
+        font-size: 2vw;
+    }
+    .NavContainer{
+        height: 5vh;
+    }
+}
+@media only screen and (min-width: 900px) and (max-width: 1200px) and (max-height: 1200px){ /*tablet horizon*/
+    .left{
+        width: 25vw;
+    }
+}
+@media only screen and (max-width: 900px) and (max-height: 400px){ /*phone vertical*/
+    .NavContainer{
+        height: 15vh;
+    }
+}

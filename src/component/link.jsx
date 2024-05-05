@@ -1,0 +1,31 @@
+const API_URL = "http://localhost:3001";
+const API_DATA = {
+    linkBook : `${API_URL}/linkBook`,
+    createBooker : `${API_URL}/createBooker`,
+    adminCreateBooker : `${API_URL}/adminCreateBooker`,
+    linkAds : `${API_URL}/linkAds`,
+    createAds : `${API_URL}/createAds`,
+    editAds : `${API_URL}/editAdvertise`,
+    deleteAds : `${API_URL}/deleteAdvertise`,
+    roomBook : `${API_URL}/roomBook`,
+    room : `${API_URL}/Room`,
+    updateRoom: `${API_URL}/updateRoom`,
+    updateRoomHour: `${API_URL}/updateRoomHour`,
+    // adminCreateManyBooker: `${API_URL}/admin/createBooker`,
+    userRequestVerify: `${API_URL}/user_requestVerify`,
+    login: `${API_URL}/api/login`,
+    reservationList: `${API_URL}/reservationList`,
+    bookingList: `${API_URL}/bookingList`,
+    bookingData: `${API_URL}/bookingData`,
+    historyList: `${API_URL}/historyList`,
+    booker: `${API_URL}/booker`,
+    adminApprovementNumber: `${API_URL}/admin/approvementAllData`,
+    adminRejectBooking: `${API_URL}/admin/rejectedAllData`,
+    updateEditRoom: `${API_URL}/updateEditRoom`,
+    laboratory: `${API_URL}/getLabdata`,
+    roomLinkBook: `${API_URL}/roomLinkBook`,
+    cancel_booking: `${API_URL}/cancel_booking`,
+    deleteManyBooker: `${API_URL}/deleteManyBooker`,
+};
+
+export default API_DATA;
