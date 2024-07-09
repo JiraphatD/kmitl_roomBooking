@@ -11,10 +11,10 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "prisma": "^5.11.0"
+    "prisma": "^5.16.1"
   },
   "dependencies": {
-    "@prisma/client": "^5.10.2",
+    "@prisma/client": "^5.16.1",
     "base32.js": "^0.1.0",
     "bcrypt": "^5.1.1",
     "cors": "^2.8.5",
